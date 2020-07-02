@@ -12,6 +12,6 @@ O objetivo desse projeto é analisar os dados da *National Hockey League* (NHL) 
 
 # English Version
 
-The National Hockey League (NHL) is the ice hockey league, which is home to teams from the United States and Canada. There are 31 teams divided into four divisions and two conferences. Each team plays 82 games during the regular season. The top eight teams in each conference advance to the playoffs, where the winners of each conference decide the Stanley Cup. For more information about the league visit the [NHL Brasil] blog (https://www.nhlbrasil.com.br/nhl)
+The National Hockey League (NHL) is the ice hockey league, which is home to teams from the United States and Canada. There are 31 teams divided into four divisions and two conferences. Each team plays 82 games during the regular season. The top eight teams in each conference advance to the playoffs, where the winners of each conference decide the Stanley Cup. For more information about the league visit the [NHL Brasil] (https://www.nhlbrasil.com.br/nhl)
 
 The objective of this project is to analyze data from the *National Hockey League* (NHL) covering the seasons 2010-2011 to 2018-2019. In order to generate *insights* and find Artificial Intelligence solutions. Compared to other sports, the advanced statistics in the Hockey are still \nchildren where the best models can only predict the winner 62% of the time due to variations in the talent of the players and puck "luck".
