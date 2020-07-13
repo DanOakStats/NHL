@@ -114,6 +114,9 @@ venv.bak/
 .spyderproject
 .spyproject
 
+# other files
+nhl_datasets/
+
 # Rope project settings
 .ropeproject
 
