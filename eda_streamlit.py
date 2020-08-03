@@ -1,5 +1,7 @@
-import streamlit as st
 import pandas as pd
+
+import streamlit as st
+
 
 
 st.image("/home/dscoliveira/Projects/NHL/images/NHL_LOGO.png", width=300)
@@ -14,10 +16,10 @@ nhl_eda = pd.read_csv("/home/dscoliveira/Projects/NHL/datasets/nhl_eda_cleaned.c
 
 # Numero de linha
 st.markdown("**Dimensao do conjunto de dados:**")
-st.markdown("Numero de observacoes")
-st.markdown(nhl_eda.shape[0])
-st.markdown("Numero de linhas")
-st.markdown(nhl_eda.shape[1])
+st.write("Numero de observacoes:", nhl_eda.shape[0])
+st.write("Numero de linhas", nhl_eda.shape[1])
 st.markdown('**Visualizando o dataframe**')
 number = st.slider('Escolha o numero de colunas que deseja ver', min_value=1, max_value=20)
 st.dataframe(nhl_eda.head(number))
+st.markdown("**Resumo estatistico**")
+st.write(nhl_eda[["goals_for","shots","hits"]].describe())
