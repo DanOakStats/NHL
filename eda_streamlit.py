@@ -1,6 +1,7 @@
 import pandas as pd
 
 import streamlit as st
+import matplotlib.pyplot as plt
 
 
 
@@ -22,4 +23,6 @@ st.markdown('**Visualizando o dataframe**')
 number = st.slider('Escolha o numero de colunas que deseja ver', min_value=1, max_value=20)
 st.dataframe(nhl_eda.head(number))
 st.markdown("**Resumo estatistico**")
-st.write(nhl_eda[["goals_for","shots","hits"]].describe())
+st.write(nhl_eda.loc[:,"goals_for":].describe())
+st.line_chart(nhl_eda.hist())
+
