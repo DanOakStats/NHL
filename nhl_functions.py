@@ -137,3 +137,34 @@ def show_goals_result(df, team, tipo, fase, df2):
         ax.set_xlim(20092010, 20192020)
     
         plt.tight_layout()
+        
+def team_win_loss(df, team_name):
+    """
+    Retorna grafico apresentando o desempenho do time atraves das temporadas vitorias e derrotas
+    """
+    # criando subset
+    team_wins = df[(df['team_name']== team_name) & (df['outcome']=='W')].groupby(['season','team_name'])['outcome'].value_counts().to_frame()
+    team_defeats = df[(df['team_name']== team_name) & (df['outcome']=='L')].groupby(['season','team_name'])['outcome'].value_counts().to_frame()
+    
+    # renomendo coluna
+    team_wins.rename(columns={'outcome':"num_wins"}, inplace=True)
+    team_defeats.rename(columns={'outcome':"num_loss"}, inplace=True)
+    
+    # resetando index
+    team_wins = team_wins.reset_index()
+    team_defeats = team_defeats.reset_index()
+    
+    # gerando grafico
+    fig, ax = plt.subplots(figsize=(8, 3.5))
+    team_wins.groupby(['season'])['num_wins'].sum().plot(linewidth=3, color="steelblue", marker='o', label="vitórias", ax=ax)
+    team_defeats.groupby(['season'])['num_loss'].sum().plot(linewidth=3, color="silver", marker='o', label="derrotas", ax=ax)
+
+    ax.set_title(team_name + ": vitorias e derrotas por temporada", fontsize=15, weight="bold", loc="left", alpha=0.5, pad=25)
+
+    
+    plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.set_ylim(0,70)
+    
+    plt.tight_layout()
