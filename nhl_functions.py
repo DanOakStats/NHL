@@ -75,7 +75,7 @@ def show_goals_result(df, team, tipo, fase, df2):
     if ((fase == "r") | (fase == "tudo")) & (tipo == "total"):
         fig, ax = plt.subplots(figsize=(8, 4))
     
-        df2.plot(color=['steelblue','lightsteelblue'], linewidth=3, ls='-',marker='o', ax=ax)
+        df2.plot(color=['navy','lightsteelblue'], linewidth=3, ls='-',marker='o', ax=ax)
         ax.set_title(team + ": gols feitos e sofridos por temporada", loc="left", weight="bold", fontsize=16, alpha=0.5, pad=25)
     
         plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
@@ -90,7 +90,7 @@ def show_goals_result(df, team, tipo, fase, df2):
     if (fase == "p")& (tipo== "total"):
         fig, ax = plt.subplots(figsize=(8, 4))
     
-        df2.plot(color=['steelblue','lightsteelblue'], linewidth=3, ls='-',marker='o', ax=ax)
+        df2.plot(color=['navy','lightsteelblue'], linewidth=3, ls='-',marker='o', ax=ax)
         ax.set_title(team + ": gols feitos e sofridos nos playoffs por temporada", loc="left", weight="bold", fontsize=16, alpha=0.5, pad=25)
     
         plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
@@ -107,7 +107,7 @@ def show_goals_result(df, team, tipo, fase, df2):
         
         fig, ax = plt.subplots(figsize=(8, 4))
     
-        df2.plot(color=['steelblue','lightsteelblue'], linewidth=3, ls='-',marker='o', ax=ax)
+        df2.plot(color=['navy','lightsteelblue'], linewidth=3, ls='-',marker='o', ax=ax)
         goals_mean.plot(color="silver", linewidth=3, ls='-',marker='o', label="media gols NHL", ax=ax)
         
         ax.set_title(team + ": media gols feitos e sofridos por temporada", loc="left", weight="bold", fontsize=16, alpha=0.5, pad=25)
@@ -124,7 +124,7 @@ def show_goals_result(df, team, tipo, fase, df2):
     if (fase == "p") & (tipo== "media"):
         fig, ax = plt.subplots(figsize=(8, 4))
     
-        df2.plot(color=['steelblue','lightsteelblue'], linewidth=3, ls='-',marker='o', ax=ax)
+        df2.plot(color=['navy','lightsteelblue'], linewidth=3, ls='-',marker='o', ax=ax)
         goals_mean_playoffs.plot(color="silver", linewidth=3, ls='-',marker='o', label="media gols NHL", ax=ax)
         
         ax.set_title(team + ": media de gols feitos e sofridos nos playoffs por temporada", loc="left", weight="bold", fontsize=16, alpha=0.5, pad=25)
@@ -156,7 +156,7 @@ def team_win_loss(df, team_name):
     
     # gerando grafico
     fig, ax = plt.subplots(figsize=(8, 3.5))
-    team_wins.groupby(['season'])['num_wins'].sum().plot(linewidth=3, color="steelblue", marker='o', label="vitórias", ax=ax)
+    team_wins.groupby(['season'])['num_wins'].sum().plot(linewidth=3, color="navy", marker='o', label="vitórias", ax=ax)
     team_defeats.groupby(['season'])['num_loss'].sum().plot(linewidth=3, color="silver", marker='o', label="derrotas", ax=ax)
 
     ax.set_title(team_name + ": vitorias e derrotas por temporada", fontsize=15, weight="bold", loc="left", alpha=0.5, pad=25)
