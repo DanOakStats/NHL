@@ -156,8 +156,8 @@ def team_win_loss(df, team_name):
     
     # gerando grafico
     fig, ax = plt.subplots(figsize=(8, 3.5))
-    team_wins.groupby(['season'])['num_wins'].sum().plot(linewidth=3, color="forestgreen", marker='o', label="vitórias", ax=ax)
-    team_defeats.groupby(['season'])['num_loss'].sum().plot(linewidth=3, color="firebrick", marker='o', label="derrotas", ax=ax)
+    team_wins.groupby(['season'])['num_wins'].sum().plot(linewidth=3, color="seagreen", marker='o', label="vitórias", ax=ax)
+    team_defeats.groupby(['season'])['num_loss'].sum().plot(linewidth=3, color="indianred", marker='o', label="derrotas", ax=ax)
 
     ax.set_title(team_name + ": vitorias e derrotas por temporada", fontsize=15, weight="bold", loc="left", alpha=0.5, pad=25)
 
