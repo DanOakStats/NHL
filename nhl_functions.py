@@ -116,7 +116,7 @@ def show_goals_result(df, team, tipo, fase, df2):
 
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
-        ax.set_ylim(0, 5)
+        ax.set_ylim(0, 4)
         ax.set_xlim(20092010, 20192020)
     
         plt.tight_layout()
@@ -133,7 +133,7 @@ def show_goals_result(df, team, tipo, fase, df2):
 
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
-        ax.set_ylim(0, 5)
+        ax.set_ylim(0, 4)
         ax.set_xlim(20092010, 20192020)
     
         plt.tight_layout()
