@@ -73,7 +73,7 @@ def show_goals_result(df, team, tipo, fase, df2):
     goals_mean_playoffs = df[df["type"]== "P"].groupby(["season"])["goals_for"].mean()
     
     if ((fase == "r") | (fase == "tudo")) & (tipo == "total"):
-        fig, ax = plt.subplots(figsize=(8, 4))
+        fig, ax = plt.subplots(figsize=(9.5, 4))
     
         df2.plot(color=['seagreen','indianred'], linewidth=3, ls='-',marker='o', ax=ax)
         ax.set_title(team + ": gols feitos e sofridos por temporada", loc="left", weight="bold", fontsize=16, alpha=0.5, pad=25)
@@ -88,7 +88,7 @@ def show_goals_result(df, team, tipo, fase, df2):
         plt.tight_layout()
     
     if (fase == "p")& (tipo== "total"):
-        fig, ax = plt.subplots(figsize=(8, 4))
+        fig, ax = plt.subplots(figsize=(9.5, 4))
     
         df2.plot(color=['seagreen','indianred'], linewidth=3, ls='-',marker='o', ax=ax)
         ax.set_title(team + ": gols feitos e sofridos nos playoffs por temporada", loc="left", weight="bold", fontsize=16, alpha=0.5, pad=25)
@@ -105,7 +105,7 @@ def show_goals_result(df, team, tipo, fase, df2):
         
     if ((fase == "r") | (fase == "tudo")) & (tipo == "media"):
         
-        fig, ax = plt.subplots(figsize=(8, 4))
+        fig, ax = plt.subplots(figsize=(9.5, 4))
     
         df2.plot(color=['seagreen','indianred'], linewidth=3, ls='-',marker='o', ax=ax)
         goals_mean.plot(color="silver", linewidth=3, ls='-',marker='o', label="media gols NHL", ax=ax)
@@ -122,7 +122,7 @@ def show_goals_result(df, team, tipo, fase, df2):
         plt.tight_layout()
     
     if (fase == "p") & (tipo== "media"):
-        fig, ax = plt.subplots(figsize=(8, 4))
+        fig, ax = plt.subplots(figsize=(9.5, 4))
     
         df2.plot(color=['seagreen','indianred'], linewidth=3, ls='-',marker='o', ax=ax)
         goals_mean_playoffs.plot(color="silver", linewidth=3, ls='-',marker='o', label="media gols NHL", ax=ax)
