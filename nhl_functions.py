@@ -155,7 +155,7 @@ def team_win_loss(df, team_name):
     team_defeats = team_defeats.reset_index()
     
     # gerando grafico
-    fig, ax = plt.subplots(figsize=(8, 3.5))
+    fig, ax = plt.subplots(figsize=(10, 6))
     team_wins.groupby(['season'])['num_wins'].sum().plot(linewidth=3, color="seagreen", marker='o', label="vitórias", ax=ax)
     team_defeats.groupby(['season'])['num_loss'].sum().plot(linewidth=3, color="indianred", marker='o', label="derrotas", ax=ax)
 
